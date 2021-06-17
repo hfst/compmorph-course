@@ -1,0 +1,9 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+label = "A network for the universal language";
+node [shape=circle]
+"INITIAL" [label="", shape=doublecircle]
+"INITIAL" -> "INITIAL" [label="?"]
+}

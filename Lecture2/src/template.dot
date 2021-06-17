@@ -1,0 +1,13 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+label = "";
+node [shape=circle]
+"INITIAL" [label=""]
+"" [label=""]
+"FINAL" [label="", shape=doublecircle]
+"INITIAL" -> "" [label=""];
+"" -> "" [label=""]
+"" -> "FINAL" [label=""];
+}

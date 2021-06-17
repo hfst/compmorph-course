@@ -1,0 +1,9 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+label = "A network for the infinite language of words consisting of zero or more a symbols {\"\", \"a\", \"aa\", \"aaa\", ...}";
+node [shape=circle]
+"INITIAL" [label="", shape=doublecircle]
+"INITIAL" -> "INITIAL" [label="a"]
+}

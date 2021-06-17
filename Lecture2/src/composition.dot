@@ -1,0 +1,38 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+label = "Composition of {<\"cat\",\"chat\">} and {<\"chat\",\"Katze\">}";
+node [shape=circle]
+"000" [label=""]
+"001" [label=""]
+"002" [label=""]
+"003" [label=""]
+"004" [label=""]
+"005" [label="", shape=doublecircle]
+"00" [label=""]
+"01" [label=""]
+"02" [label=""]
+"03" [label=""]
+"04" [label=""]
+"05" [label="", shape=doublecircle]
+"0" [label=""]
+"1" [label=""]
+"2" [label=""]
+"3" [label=""]
+"4" [label="", shape=doublecircle]
+"000" -> "001" [label="c\nK"];
+"001" -> "002" [label="a\na"];
+"002" -> "003" [label="t\nt"];
+"003" -> "004" [label="ε\nz"];
+"004" -> "005" [label="ε\ne"];
+"00" -> "01" [label="c\nK"];
+"01" -> "02" [label="h\na"];
+"02" -> "03" [label="a\nt"];
+"03" -> "04" [label="t\nz"];
+"04" -> "05" [label="ε\ne"];
+"0" -> "1" [label="c\nc"];
+"1" -> "2" [label="a\nh"];
+"2" -> "3" [label="t\na"];
+"3" -> "4" [label="ε\nt"];
+}

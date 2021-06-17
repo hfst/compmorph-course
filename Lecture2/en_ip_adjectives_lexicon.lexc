@@ -1,0 +1,34 @@
+Multichar_Symbols
++A       ! Adjective tag
++Pos     ! Positive
++Cmp     ! Comparative
++Sup     ! Superlative
+
+LEXICON Root
+Adjectives ;
+
+LEXICON Adjectives
+big     A ;
+cool    A ;
+crazy   A ;
+great   A ;
+grim    A ;
+happy   A ;
+hot     A ;
+long    A ;
+quick   A ;
+sad     A ;
+short   A ;
+slow    A ;
+small   A ;
+warm    A ;
+
+LEXICON A
++A:^    Comparison ;
+
+LEXICON Comparison
++Pos:0  # ;
++Cmp:er # ;
++Sup:est  # ;
+
+END

@@ -1,0 +1,9 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+label = "The lowercase/uppercase transducer.\nEach lowercase:uppercase pair of symbols in fact has its own arc.";
+node [shape=circle]
+"INITIAL" [label="", shape=doublecircle]
+"INITIAL" -> "INITIAL" [label="a:A\nb:B\nc:C\n... etc."]
+}

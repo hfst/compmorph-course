@@ -1,0 +1,20 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+label = "A network for \"fat\" and \"father\"";
+node [shape=circle]
+"INITIAL" [label=""]
+"f" [label=""]
+"fa" [label=""]
+"fat" [label="", shape=doublecircle]
+"fath" [label=""]
+"fathe" [label=""]
+"FINAL" [label="", shape=doublecircle]
+"INITIAL" -> "f" [label="f"];
+"f" -> "fa" [label="a"];
+"fa" -> "fat" [label="t"];
+"fat" -> "fath" [label="h"];
+"fath" -> "fathe" [label="e"];
+"fathe" -> "FINAL" [label="r"];
+}

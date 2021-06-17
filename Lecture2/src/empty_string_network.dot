@@ -1,0 +1,8 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+label = "Network for the empty-string language {\"\"}";
+node [shape=circle]
+"INITIAL" [label="", shape=doublecircle]
+}

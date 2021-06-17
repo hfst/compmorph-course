@@ -1,0 +1,14 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+label = "Rule 2: YToI";
+node [shape=circle,style=filled,fillcolor=yellow]
+"0" [label="", shape=doublecircle]
+"1" [label=""]
+"2" [label=""]
+"0" -> "0" [label="?"];
+"0" -> "1" [label="y:i"]
+"1" -> "2" [label="^"];
+"2" -> "0" [label="e"];
+}

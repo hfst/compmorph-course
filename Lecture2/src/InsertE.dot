@@ -1,0 +1,21 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+label = "Rule 1: InsertE\nQuestion marks mean any other character, which remains unchanged. (Some details are omitted here.)";
+node [shape=circle,style=filled,fillcolor=yellow]
+"0" [label="", shape=doublecircle]
+"1" [label=""]
+"2" [label=""]
+"3" [label=""]
+"4" [label=""]
+"0" -> "0" [label="?"];
+"0" -> "1" [label="c, s, y"]
+"1" -> "0" [label="?"];
+"1" -> "2" [label="h"];
+"2" -> "0" [label="?"];
+"2" -> "3" [label="^"];
+"3" -> "0" [label="?"];
+"3" -> "4" [label="ε:e"];
+"4" -> "0" [label="s"];
+}

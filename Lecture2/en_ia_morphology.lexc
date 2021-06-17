@@ -1,0 +1,47 @@
+Multichar_Symbols
+	+N	! Noun tag
+        +Sg	! Singular
+        +Pl	! Plural
+ 	+Poss	! Possessive form
+
+LEXICON Root
+	Nouns ; ! No input, no output
+
+!
+! NOUNS start here
+!
+
+LEXICON Nouns
+
+cat	N ;
+dog	N ;
+
+church	  N ;
+kiss	  N ;
+
+beauty	  N ;
+sky	  N ;
+
+
+! End of stem marker
+
+LEXICON N
++N:^	Num ;
+
+! Singular or plural
+
+LEXICON Num
++Sg:0	PossWithS ;
++Pl:s	PossWithoutS ;
+
+! Possessive endings: usually the singular is 's and the plural is '
+
+LEXICON PossWithS
++Poss:'s     # ;
+	     # ; ! No ending: no input, no output
+
+LEXICON PossWithoutS
++Poss:'	     # ;
+	     # ; ! No ending: no input, no output
+
+END

@@ -1,0 +1,34 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+label = "A finite-state automaton for a three-word language";
+node [shape=circle]
+"INITIAL" [label=""]
+"c" [label=""]
+"ca" [label=""]
+"can" [label=""]
+"cant" [label=""]
+"t" [label=""]
+"ti" [label=""]
+"tig" [label=""]
+"tigr" [label=""]
+"m" [label=""]
+"me" [label=""]
+"mes" [label=""]
+"FINAL" [ label="", shape=doublecircle]
+"INITIAL" -> "c" [label="c"];
+"c" -> "ca" [label="a"];
+"ca" -> "can" [label="n"];
+"can" -> "cant" [label="t"];
+"cant" -> "FINAL" [label="o"];
+"INITIAL" -> "t" [label="t"];
+"t" -> "ti" [label="i"];
+"ti" -> "tig" [label="g"];
+"tig" -> "tigr" [label="r"];
+"tigr" -> "FINAL" [label="e"];
+"INITIAL" -> "m" [label="m"];
+"m" -> "me" [label="e"];
+"me" -> "mes" [label="s"];
+"mes" -> "FINAL" [label="a"];
+}

@@ -1,0 +1,9 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+label = "Rule 3: CleanUp";
+node [shape=circle,style=filled,fillcolor=yellow]
+"0" [label="", shape=doublecircle]
+"0" -> "0" [label="?, ^:ε"];
+}

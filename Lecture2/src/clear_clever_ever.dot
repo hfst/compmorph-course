@@ -1,0 +1,24 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+label = "A network for \"clear\", \"clever\" and \"ever\"";
+node [shape=circle]
+"INITIAL" [label=""]
+"c" [label=""]
+"cl" [label=""]
+"cle" [label=""]
+"clea" [label=""]
+"e" [label=""]
+"ev" [label=""]
+"FINAL" [label="", shape=doublecircle]
+"INITIAL" -> "c" [label="c"];
+"c" -> "cl" [label="l"]
+"cl" -> "cle" [label="e"]
+"cle" -> "clea" [label="a"]
+"cle" -> "ev" [label="v"]
+"clea" -> "FINAL" [label="r"]
+"INITIAL" -> "e" [label="e"];
+"e" -> "ev" [label="v"]
+"ev" -> "clea" [label="e"]
+}

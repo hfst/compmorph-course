@@ -1,0 +1,27 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+node [shape=ellipse,style=filled,fillcolor=yellow]
+"Root" [label="Root"] 
+"Nouns" [label="Nouns"] 
+"N" [label="N"] 
+"Num" [label="Num"] 
+"PossWithS" [label="PossWithS"] 
+"PossWithoutS" [label="PossWithoutS"] 
+"#" [shape=doublecircle,label="#"] 
+"Root" -> "Nouns" [label="ε:ε "];
+"Nouns" -> "N" [label="cat:cat "];
+"Nouns" -> "N" [label="dog:dog "];
+"Nouns" -> "N" [label="church:church "];
+"Nouns" -> "N" [label="kiss:kiss "];
+"Nouns" -> "N" [label="beauty:beaut "];
+"Nouns" -> "N" [label="sky:sk "];
+"N" -> "Num" [label="+N:^ "];
+"Num" -> "PossWithS" [label="+Sg:ε "];
+"Num" -> "PossWithoutS" [label="+Pl:s "];
+"PossWithS" -> "#" [label="+Poss:'s "];
+"PossWithS" -> "#" [label="ε:ε "];
+"PossWithoutS" -> "#" [label="+Poss:' "];
+"PossWithoutS" -> "#" [label="ε:ε "];
+}
