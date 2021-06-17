@@ -1,0 +1,16 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+node [shape=ellipse,style=filled,fillcolor=yellow]
+"Nouns" [label="Nouns"] 
+"N" [label="N"] 
+"N_s" [label="N_s"] 
+"N_y" [label="N_y"] 
+"Nouns" -> "N" [label="cat:cat "];
+"Nouns" -> "N" [label="dog:dog "];
+"Nouns" -> "N_s" [label="church:church "];
+"Nouns" -> "N_s" [label="kiss:kiss "];
+"Nouns" -> "N_y" [label="beauty:beaut "];
+"Nouns" -> "N_y" [label="sky:sk "];
+}

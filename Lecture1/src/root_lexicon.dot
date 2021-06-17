@@ -1,0 +1,9 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+node [shape=ellipse,style=filled,fillcolor=yellow]
+"Root" [label="Root"] 
+"Nouns" [label="Nouns"] 
+"Root" -> "Nouns" [label="ε:ε "];
+}

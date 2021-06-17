@@ -1,0 +1,37 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+node [shape=ellipse,style=filled,fillcolor=yellow]
+"Root" [label="Root"] 
+"Nouns" [label="Nouns"] 
+"N" [label="N"] 
+"N_s" [label="N_s"] 
+"N_y" [label="N_y"] 
+"Num" [label="Num"] 
+"Num_s" [label="Num_s"] 
+"Num_y" [label="Num_y"] 
+"PossWithS" [label="PossWithS"] 
+"PossWithoutS" [label="PossWithoutS"] 
+"#" [shape=doublecircle,label="#"] 
+"Root" -> "Nouns" [label="ε:ε "];
+"Nouns" -> "N" [label="cat:cat "];
+"Nouns" -> "N" [label="dog:dog "];
+"Nouns" -> "N_s" [label="church:church "];
+"Nouns" -> "N_s" [label="kiss:kiss "];
+"Nouns" -> "N_y" [label="beauty:beaut "];
+"Nouns" -> "N_y" [label="sky:sk "];
+"N" -> "Num" [label="+N:ε "];
+"N_s" -> "Num_s" [label="+N:ε "];
+"N_y" -> "Num_y" [label="+N:ε "];
+"Num" -> "PossWithS" [label="+Sg:ε "];
+"Num" -> "PossWithoutS" [label="+Pl:s "];
+"Num_s" -> "PossWithS" [label="+Sg:ε "];
+"Num_s" -> "PossWithoutS" [label="+Pl:es "];
+"Num_y" -> "PossWithS" [label="+Sg:y "];
+"Num_y" -> "PossWithoutS" [label="+Pl:ies "];
+"PossWithS" -> "#" [label="+Poss:'s "];
+"PossWithS" -> "#" [label="ε:ε "];
+"PossWithoutS" -> "#" [label="+Poss:' "];
+"PossWithoutS" -> "#" [label="ε:ε "];
+}

@@ -1,0 +1,13 @@
+// This graph generated with hfst-fst2txt
+digraph "text(<stdin>)" {
+charset = UTF8;
+rankdir = LR;
+node [shape=ellipse,style=filled,fillcolor=yellow]
+"PossWithS" [label="PossWithS"] 
+"PossWithoutS" [label="PossWithoutS"] 
+"#" [shape=doublecircle,label="#"] 
+"PossWithS" -> "#" [label="+Poss:'s "];
+"PossWithS" -> "#" [label="ε:ε "];
+"PossWithoutS" -> "#" [label="+Poss:' "];
+"PossWithoutS" -> "#" [label="ε:ε "];
+}
