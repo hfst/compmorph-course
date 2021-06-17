@@ -1,0 +1,42 @@
+Multichar_Symbols
+	+N	 ! Noun tag
+	+Sg	  ! Singular tag
+	+Ptv	   ! Partitive
+	+Gen	    ! Genitive
+
+LEXICON Root
+0:#	NounStems ;
+
+LEXICON NounStems
+sika	N_BackVowel ;
+papu	N_BackVowel ;
+sota	N_BackVowel ;
+kukka	N_BackVowel ;
+loppu	N_BackVowel ;
+matto	N_BackVowel ;
+tiuku	N_BackVowel ;
+puku	N_BackVowel ;
+kurke	N_BackVowel ;
+vanki	N_BackVowel ;
+kumpu	N_BackVowel ;
+ranta	N_BackVowel ;
+ilta	N_BackVowel ;
+parta	N_BackVowel ;
+aika	N_BackVowel ;
+poika	N_BackVowel ;
+
+LEXICON N_BackVowel
++N+Sg:0		Case_BackVowel ;
+
+LEXICON N_FrontVowel
++N+Sg:0		Case_FrontVowel ;
+
+LEXICON Case_BackVowel
++Ptv:a#		# ;	! Partitive ends in a
++Gen:n# 	# ;
+
+LEXICON Case_FrontVowel
++Ptv:ä#		# ;	! Partitive ends in ä
++Gen:n# 	# ;
+
+END

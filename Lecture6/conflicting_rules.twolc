@@ -1,0 +1,8 @@
+Alphabet a a:b a:c b c ;
+
+Rules
+"Rule 6"
+a:b <=> _ r ;
+
+"Rule 7"
+a:c <=> l _ r ;

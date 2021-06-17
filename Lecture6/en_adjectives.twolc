@@ -1,0 +1,23 @@
+Alphabet
+    a b c d e f g h i j k l m n o p q r s t u v w x y z
+        ' %^:0 y:i 0:d 0:g 0:m 0:t ;
+
+Rule-variables
+    Cx Cy ;
+
+Sets
+    Vowel = a e i o u y ;
+        Cons = b c d f g h j k l m n p q r s t v w x z ;
+
+Rules
+    "YToI"
+        y:i <=> _ %^: :e ;
+
+    "DoubleCons"
+        0:Cy <=> Cons Vowel Cx _ %^: :e ;
+	              where Cx in ( d g m t )
+		      Cy in ( d g m t )
+		      matched;
+
+    "CleanUp"
+        %^:0 <=> _ ;

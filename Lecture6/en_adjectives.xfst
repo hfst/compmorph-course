@@ -1,0 +1,27 @@
+! Read lexicon and make a regex of it
+read lexc en_adjectives.lexc
+define Lexicon ;
+
+define Vowel [ a | e | i | o | u | y ] ;
+define Cons  [ b | c | d | f | g | h | j | k | l | m |
+               n | p | q | r | s | t | v | w | x | z ] ;
+
+! y/i alternation
+define YToI     y -> i || _ %^ e ;
+
+! Consonant reduplication
+define DoubleCons d -> d d ,
+                  g -> g g ,
+		  m -> m m ,
+		  t -> t t || Cons Vowel _ %^ e ;
+
+! Last rule cleans away the boundary marker
+define CleanUp  %^ -> 0 ;
+
+! Compose lexicon with rules
+regex Lexicon .o. YToI .o. DoubleCons .o. CleanUp ;
+
+! Output all surface forms of the words
+! lower-words
+
+save stack en_adjectives.xfst.hfst

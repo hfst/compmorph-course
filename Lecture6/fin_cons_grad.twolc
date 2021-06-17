@@ -1,0 +1,84 @@
+! GRADATION.TXT -- a set of rules for Finnish consonant gradation
+! Copyright (c) 1987 by Lauri Karttunen, modified by Mathias Creutz
+
+Alphabet
+
+   a b c d e f g h i j k l m n o p q r s t u v x y ä ö w z #:0 ;
+
+Sets
+
+   VclessStop = k p t ;
+   Cons = VclessStop b c d f g h j l m n ng r s v x z ' ;
+   Vowel = a e i o u y ä ö ;
+   Labial =  p b m ;
+   Velar = g k ;
+   Liquid = l r ;
+   Nasal = m n ;
+   HighLabial = u y ;
+
+Definitions
+
+   ClosedOffset = :Cons #: ;
+
+Rules
+
+   "Consonant gradation" ! Single k, p, and t are realized as
+                         ! zero, v, and d, respectively, in the
+                         ! beginning of a closed syllable.
+     Cx:Cy <=>  h | Liquid | Vowel: _ Vowel ClosedOffset ;
+     	                 where Cx in (k p t)
+           		             Cy in (0 v d)
+                      matched ;
+
+   "Geminate gradation"           ! Geminate stops are shortened to
+                                  ! single stops in a closed syllable.
+
+     Cx:0 <=>  Cx _ Vowel ClosedOffset ;
+               where Cx in VclessStop ;
+
+
+  "Gradation after nasals"  ! Stops assimilate to the preceding
+                            ! nasal consonant in the weak grade.
+
+     Cx:Cy <=> Cz _ Vowel ClosedOffset ;
+               where Cx in (k p t)
+                     Cy in (g m n)
+                     Cz in (n m n)
+               matched ;
+ 
+  "Gradation of k after VV"   ! k weakens to a syllable boundary
+                              ! marker between a pair of identical
+                              ! vowels following another vowel
+
+     k:' <=> Vowel Vx _ Vx ClosedOffset ; where Vx in Vowel ;
+
+ 
+  "Gradation of k between u/y"   ! k weakens to v between u's
+                                 ! and y's.
+
+     k:v <=> Cons Vx _ Vx ClosedOffset ;
+             where Vx in HighLabial ;
+
+  "Gradation of k after liquids or h"   ! k weakens to j before e
+                                        ! after a liquid or h.
+
+     k:j <=> Liquid | h _ e: ClosedOffset ;
+
+  "Gradation of t after liquids"   ! t assimilates to the preceding
+                                   ! liquid in the weak grade.
+
+     t:Cx  <=>  Cx _ Vowel ClosedOffset  ; where Cx in Liquid ;
+
+  "Weak grade of poika, aika"   ! Exceptionally, poja.., aja..
+                                ! instead of *poia.., *aia.. in the
+                                ! weak grade of poika, aika.
+
+     i:j <=> #: [p o | a ] _ k: a: ClosedOffset ;
+
+
+  "Weak grade of ruoka"   ! Exceptionally, either ruoa.. or ruua..
+                          ! in the weak grade of ruoka.
+                          ! The operator is => rather than <=> because
+                          ! o can also be realized as itself here.
+
+     o:u => #: r u _ k: a: ClosedOffset ;
