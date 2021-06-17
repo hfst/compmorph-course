@@ -1,0 +1,8 @@
+LEXICON Root
+RE+	VRoots ;  ! not a multichar symbol
+	VRoots ;  ! empty entry
+
+LEXICON VRoots
+pili	# ;
+tahi	# ;
+kuha	# ;

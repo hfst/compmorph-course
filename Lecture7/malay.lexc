@@ -1,0 +1,18 @@
+Multichar_Symbols
+^[ ^] +Noun +Unmarked +Plural
+
+LEXICON Root
+0:^[{         NRoots ;
+              NRoots ;
+
+LEXICON NRoots
+buku          NSuff ;
+lembu         NSuff ;
+pelabuhan     NSuff ;
+
+LEXICON NSuff
++Noun:0       Num ;
+
+LEXICON Num
++Unmarked:0   # ;
++Plural:}^2^] # ;

@@ -1,0 +1,14 @@
+read lexc malay.lexc
+define Lexicon ;
+
+define BracketFilter [
+    ~[ ?* "^[" ~$["^]"] ]
+      & ~[ ~$["^["] "^]" ?* ]
+      ] ;
+
+regex
+Lexicon .o. BracketFilter ;
+
+compile-replace lower
+
+save stack malay.xfst.hfst

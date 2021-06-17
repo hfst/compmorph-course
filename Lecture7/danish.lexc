@@ -1,0 +1,38 @@
+Multichar_Symbols
++Indef  ! indefinite form
++Def    ! definite form
+! Remember to list all your flag diacritics as multichar symbols, too
+
+LEXICON Root
+Articles ;
+
+LEXICON Articles
+NounStems ;  ! no article
+:et_    AdjStems ;   ! indefinite article (a/an)
+:det_   AdjStems ;   ! definite article (the)
+
+LEXICON AdjStems
+NounStems ;     ! no adjective attribute
+dejlig  AdjSuffixes ;   ! nice
+god     AdjSuffixes ;   ! good
+gul     AdjSuffixes ;   ! yellow
+ny      AdjSuffixes ;   ! new
+stor    AdjSuffixes ;   ! big
+
+LEXICON AdjSuffixes
+t_      NounStems ;     ! indefinite adj. suffix
+t_:e_   NounStems ;     ! definite adj. suffix
+
+LEXICON NounStems
+brev    NounSuffixes ;  ! letter
+hegn    NounSuffixes ;  ! fence
+fly     NounSuffixes ;  ! plane
+hus     NounSuffixes ;  ! house
+tog     NounSuffixes ;  ! train
+
+LEXICON NounSuffixes
++Indef: # ;             ! no noun suffix
++Def:   # ;             ! no noun suffix
++Def:et # ;             ! definite suffix
+
+END

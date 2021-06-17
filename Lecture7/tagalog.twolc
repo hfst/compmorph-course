@@ -1,0 +1,16 @@
+Alphabet p t k l h a i u %+:0
+         R:p R:t R:k E:a E:i E:u ;
+
+Rule-variables CC VV ;
+
+Sets
+    Vowel = a i u ;  ! add more as needed
+        Cons = p t k ;   ! add more as needed
+
+Rules
+
+"R realization as a consonant"
+R:CC <=> _ E: %+: CC ; where CC in Cons ;
+
+"E realization as a vowel"
+E:VV <=> _ %+: (Cons:) VV ; where VV in Vowel ;

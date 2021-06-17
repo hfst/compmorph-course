@@ -1,0 +1,22 @@
+Alphabet
+    a i u b d k r s t V:a V:i V:u C:0 C:t C:r
+        %<VERB1%>:0 %<VERB2%>:0 %<ACTIVE%>:0 %<PASSIVE%>:0 ;
+
+Rule-variables Cc ;
+
+Sets
+    Cons = b d k r s t ;
+
+Rules
+
+"Active voice CaCaC pattern"
+<[ Cons V:a Cons C: V:a Cons ]> <==> _ : %<ACTIVE%>:0 ;
+
+"Passive voice CuCiC pattern"
+<[ Cons V:u Cons C: V:i Cons ]> <==> _ : %<PASSIVE%>:0 ;
+
+"Form 1 single middle consonant"
+C:0 <=> _ :* %<VERB1%>:0 ;
+
+"Form 2 double middle consonant"
+C:Cc <=> Cc _ :* %<VERB2%>:0 ; where Cc in Cons ;
