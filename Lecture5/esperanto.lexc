@@ -1,0 +1,31 @@
+Multichar_Symbols
+	+Verb +Cont +Pres +Past +Fut +Cond +Inf +Subj +Guess ^GUESSVERBROOT
+
+LEXICON Root
+                Vroot ;
+
+LEXICON Vroot
+dir             V ; ! say
+don             V ; ! give
+est             V ; ! be
+ir              V ; ! go
+pens            V ; ! think
+^GUESSVERBROOT  V ; ! <- placeholder
+                    ! for any other verbs
+
+LEXICON V
++Verb:0         AD ;
+
+LEXICON AD
++Cont:ad        Vend ; ! continuous aspect
+                Vend ;
+
+LEXICON Vend
++Pres:as        # ; ! present
++Past:is        # ; ! past
++Fut:os         # ; ! future
++Cond:us        # ; ! conditional
++Inf:i          # ; ! infinitive
++Subj:u         # ; ! subjunctive
+
+END
